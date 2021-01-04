@@ -42,7 +42,8 @@
                         <div class="header__contacts">
                             <div class="header__contacts-item">
                                 <img src="<?php echo bloginfo('template_url');?>/assets/img/icons/svg/email.svg" alt="почта" class="header__contacts-logo">
-                                <a href="mailto:mirdetstva@gmail.com" class="header__contacts-mail">mirdetstva@gmail.com</a>
+                                <!-- ('mail', 2) 2 id page, where is email (can find in url post=2) http://childhood/wp-admin/post.php?post=2&action=edit-->
+                                <a href="<?php the_field('mail', 2) ?>" class="header__contacts-mail"><?php the_field('mail', 2) ?></a>
                             </div>
                             <div class="header__contacts-item">
                                 <img src="<?php echo bloginfo('template_url');?>/assets/img/icons/svg/phone.svg" alt="телефон" class="header__contacts-logo">
